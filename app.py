@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from datetime import datetime #For dynamic date
 from greeting import get_greeting #Import from your module
 app = Flask(__name__)
+
 @app.route('/greeting/<name>') # URL: http://127.0.0.1:5000/greeting/YourName
 def greeting(name): 
    message = get_greeting(name) 
